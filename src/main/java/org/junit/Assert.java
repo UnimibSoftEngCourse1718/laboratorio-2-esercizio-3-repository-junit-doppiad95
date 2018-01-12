@@ -29,6 +29,14 @@ public class Assert {
     protected Assert() {
     }
 	
+	public static void assertGreaterThan(int a, int b) {
+        assertTrue(null, a > b);
+    }
+    
+    public static void assertGreaterThan(char a, char b) {
+        assertTrue(null, a > b);
+    }
+	
 	public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
         if (comparator.compare(o1, o2) <= 0) {
            fail("First parameter not greater than second"); 
