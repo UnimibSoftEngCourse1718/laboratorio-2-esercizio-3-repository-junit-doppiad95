@@ -28,6 +28,12 @@ public class Assert {
      */
     protected Assert() {
     }
+	
+	public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
+        if (comparator.compare(o1, o2) <= 0) {
+           fail("First parameter not greater than second"); 
+        }
+    }
 
     /**
      * Asserts that a condition is true. If it isn't it throws an
